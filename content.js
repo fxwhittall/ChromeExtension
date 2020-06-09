@@ -1,0 +1,1 @@
+document.addEventListener('scroll', () => alert('Watch out, it is DJ Khaled!'));
