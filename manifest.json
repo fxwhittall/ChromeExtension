@@ -14,5 +14,13 @@
             "css": ["content.css"],
             "matches": ["https://*.google.com/*"]
         }
+    ],
+    "background":[
+      {
+        "scripts": ["background.js"]
+      }
+    ],
+    "web_accessible_resources":[
+      "Button_Push.mp3"
     ]
 }
