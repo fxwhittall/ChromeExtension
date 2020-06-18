@@ -1,26 +1,24 @@
 {
-  "name": "Vanessa's plugin",
+  "name": "Color changer",
   "version": "0.0.1",
-  "description": "This is the full description of the plugin",
+  "description": "This changes the background color of websites",
   "manifest_version": 2,
   "browser_action": {
     "default_popup": "./index.html",
     "default_title": "Open the popup",
-    "default_icon":"./icon16.png"
+    "default_icon":"./palette.png"
   },
     "content_scripts": [
         {
             "js": ["content.js"],
-            "css": ["content.css"],
             "matches": ["https://*.google.com/*"]
         }
     ],
-    "background":[
-      {
-        "scripts": ["background.js"]
-      }
-    ],
     "web_accessible_resources":[
       "Button_Push.mp3"
+    ],
+    "permissions": [
+      "tabs",
+      "storage"
     ]
 }
