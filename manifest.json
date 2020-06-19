@@ -1,7 +1,7 @@
 {
-  "name": "Vanessa's plugin",
+  "name": "Black background",
   "version": "0.0.1",
-  "description": "This is the full description of the plugin",
+  "description": "Changes the background color of google.com to black",
   "manifest_version": 2,
   "browser_action": {
     "default_popup": "./index.html",
