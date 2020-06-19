@@ -23,7 +23,7 @@ document.querySelector('#changeBtn').addEventListener('click', () => {
 	changeColor(document.querySelector('#colorbox').value);
 });
 
-function changeColor(color) => {
+function changeColor(color){
 	//read selected color and store it
 	chrome.storage.local.set({color});
 

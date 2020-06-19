@@ -8,12 +8,10 @@ chrome.storage.local.get('color', (response) => {
 	}
 })
 
-
 //color change
 chrome.runtime.onMessage.addListener(request => {
 	if(request.color)
 	{
-		console.log('color changed');
 		document.body.style.backgroundColor = request.color;
 	}
 });
