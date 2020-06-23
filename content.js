@@ -9,9 +9,8 @@ chrome.storage.local.get('color', (response) => {
 })
 
 //color change
-chrome.runtime.onMessage.addListener(request => {
-	if(request.color)
-	{
+chrome.runtime.onMessage.addListener(function(request) {
+	if(request.color){
 		document.body.style.backgroundColor = request.color;
 	}
 });

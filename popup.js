@@ -29,8 +29,8 @@ function changeColor(color){
 
 	//get current tab and change the background color
 	chrome.tabs.query({
-		url : 'https://*.google.com/*'
-	}, tabs => {
-		tabs.forEach(tab => chrome.tabs.sendMessage(tab.id, {color}));
+		active: true, currentWindow: true
+	}, function(tabs) {
+		chrome.tabs.sendMessage(tabs[0].id, {color});
 	});
 }
