@@ -1,6 +1,30 @@
 body {
     background-color: lightblue;
-   
+}
+
+button{
+	width: 40%;
+	border: none;
+	margin-bottom: 5px;
+	padding: 5px;
+}
+
+#whiteBtn{
+	background-color: white;
+}
+
+#blackBtn{
+	background-color: black;
+	color: white;
+}
+
+#greyBtn{
+	background-color: #7e7e7e;
+	color: white;
+}
+
+#blueBtn{
+	background-color: #80b4f7;
 }
 
 h1 {
