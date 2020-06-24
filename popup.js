@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	var blkBtn = document.getElementById("blackBtn");
 	var greyBtn = document.getElementById("greyBtn");
 	var blueBtn = document.getElementById("blueBtn");
+	//var muteBtn = document.getElementById("muteBtn");
 	change.addEventListener('click', () => {
 		let color = document.getElementById("colorbox").value;
 		changeColor(color);
@@ -27,6 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 function changeColor(color){
+	//store current value
+	chrome.storage.local.set({color});
 	//get current tab and change the background color
 	chrome.tabs.query({
 		active: true, currentWindow: true

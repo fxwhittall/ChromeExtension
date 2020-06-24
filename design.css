@@ -27,6 +27,14 @@ button{
 	background-color: #80b4f7;
 }
 
+.mute-button{
+	margin-top: 20px;
+}
+
+#muteBtn{
+	width: 80%;
+}
+
 h1 {
     color: navy;
     margin-left: 20px;
