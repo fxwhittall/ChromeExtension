@@ -1,26 +1,30 @@
-// document.querySelector('#greyBtn').addEventListener('click', () => {
-// 	console.log('grey button clicked');
-// 	changeColor('#7e7e7e');
-// });
-
-// document.querySelector('#blueBtn').addEventListener('click', () => {
-// 	console.log('blue button clicked');
-// 	changeColor('#80b4f7');
-// });
-
 document.addEventListener('DOMContentLoaded', () => {
 	var change = document.getElementById("changeBtn");
 	var whBtn = document.getElementById("whiteBtn");
 	var blkBtn = document.getElementById("blackBtn");
+	var greyBtn = document.getElementById("greyBtn");
+	var blueBtn = document.getElementById("blueBtn");
 	change.addEventListener('click', () => {
 		let color = document.getElementById("colorbox").value;
 		changeColor(color);
 	});
-// 	whBtn.addEventListener('click', () => {
-// 	 	changeColor('#ffffff');
-// 	});
+ 	whBtn.addEventListener('click', () => {
+		let color = '#ffffff';
+ 	 	changeColor(color);
+ 	});
+ 	blkBtn.addEventListener('click', () => {
+		let color = '#000000';
+ 	 	changeColor(color);
+ 	});
+ 	greyBtn.addEventListener('click', () => {
+		let color = '#7e7e7e';
+ 	 	changeColor(color);
+ 	});
+ 	blueBtn.addEventListener('click', () =>{
+		let color = '#80b4f7';
+ 	 	changeColor(color);
+ 	});
 })
-
 
 function changeColor(color){
 	//get current tab and change the background color
