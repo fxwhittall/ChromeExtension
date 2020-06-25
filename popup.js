@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	var blkBtn = document.getElementById("blackBtn");
 	var greyBtn = document.getElementById("greyBtn");
 	var blueBtn = document.getElementById("blueBtn");
-	//var muteBtn = document.getElementById("muteBtn");
+	var muteBtn = document.getElementById("muteBtn");
 	change.addEventListener('click', () => {
 		let color = document.getElementById("colorbox").value;
 		changeColor(color);
@@ -21,9 +21,12 @@ document.addEventListener('DOMContentLoaded', () => {
 		let color = '#7e7e7e';
  	 	changeColor(color);
  	});
- 	blueBtn.addEventListener('click', () =>{
+ 	blueBtn.addEventListener('click', () => {
 		let color = '#80b4f7';
  	 	changeColor(color);
+ 	});
+ 	muteBtn.addEventListener('click', () => {
+ 		swapMuteState(muteBtn);
  	});
 })
 
@@ -37,4 +40,11 @@ function changeColor(color){
 	(tabs) => {
 		chrome.tabs.sendMessage(tabs[0].id, {input: color})
 	});
+}
+
+function swapMuteState(muteBtn){
+	if(muteBtn.innerHTML == "Mute Click Sound"){
+		muteBtn.innerHTML = "Unmute Click Sound";
+	}
+	else muteBtn.innerHTML = "Mute Click Sound";
 }
