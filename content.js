@@ -1,6 +1,6 @@
 //button click sound
-var click = new Audio(chrome.runtime.getURL("Button_Push.mp3"));
-document.addEventListener('click', () => click.play());
+//var click = new Audio(chrome.runtime.getURL("Button_Push.mp3"));
+//document.addEventListener('click', () => click.play());
 
  chrome.storage.local.get('color', (response) => {
  	if(response.color){
